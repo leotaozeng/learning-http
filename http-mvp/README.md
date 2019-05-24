@@ -5,12 +5,14 @@
 ## What is a web server?
 * Technically, a web server is any computer that has a running daemon (service) accepting HTTP requests on some port (by default, 80) and replying with HTTP responses. This is typically HTML content.
 
+## What is CORS(Cross Origin Resource Sharing)?
+* A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
+
 ## HTTP Protocol
 * Is a request-response protocol
 * By default, the HTTP protocol is served on port 80 of the web server
 
 ### Versions
-
 
 ## HTTP Messages
 * HTTP messages are how data is exchanged between a server and a client
@@ -30,7 +32,7 @@
 | Empty Line      |  ``                           | N/A                          |
 | Body (Optional) | `Hello from client!`          | N/A                          |
 
-## CORS
-
 ## Documentations
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages">HTTP Messages</a>
+
+<a href="https://www.codecademy.com/articles/what-is-cors">What is CORS?</a>

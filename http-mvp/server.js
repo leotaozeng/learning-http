@@ -7,9 +7,19 @@ http.createServer((request, response) => {
     console.log("err->", err);
     console.log("data", data);
   });
- 
-  response.writeHead(200, { 'Content-Type': 'text/html' });
-  response.end(html);
+
+  if (request.url === '/') {
+    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.end(html);
+  }
+
+  if (request.url === '/script.js') {
+    response.writeHead(200, {
+      'Content-Type': 'text/javascript',
+      'Cache-Control': 'max-age=20'
+    });
+    response.end('console.log("script loaded")');
+  }
 
 }).listen(8090);
 

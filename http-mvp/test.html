@@ -10,15 +10,30 @@
 
 <body>
   <h1>Hello HTTP</h1>
-
-  <!-- <script>
-    const xhr = new XMLHttpRequest()
-    // CORS
-    xhr.open('GET', 'http://127.0.0.1:8082/')
-    xhr.send()
-  </script> -->
   
-  <script src="http://127.0.0.1:8082/"></script>
+  <select id="exchange">
+    <option value="balance">Balance</option>
+  </select>
+
+  <button onclick="runAPI()">Run</button>  
+
+  <script>
+    // fetch('http://127.0.0.1:8082/', {
+    //   method: 'PUT',
+    //   headers: {
+    //     'X-Test-Cors': '123'
+    //   }
+    // })
+
+    const runAPI = () => {
+      const exchange = document.querySelector('#exchange')
+      console.log(exchange)
+    }
+
+    const request = () => {}
+  </script>
+
+  <script src="/script.js"></script>
 </body>
 
 </html>
