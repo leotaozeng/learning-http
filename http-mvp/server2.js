@@ -1,7 +1,10 @@
 const http = require('http');
 
-http.createServer(function (request, response) {
-  response.writeHead(200, { 'Content-Type': 'text/plain' });
+http.createServer((request, response) => {
+  response.writeHead(200, {
+    'Content-Type': 'text/plain',
+    'Access-Control-Allow-Origin': 'http://localhost:8090/'
+  });
   response.end('Hello World');
 }).listen(8082);
 

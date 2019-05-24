@@ -2,9 +2,15 @@
 ## What is a protocol?
 * A protocol in IT jargon refers to a set of rules that are agreed upon between two or parties for communication
 
+## What is a web server?
+* Technically, a web server is any computer that has a running daemon (service) accepting HTTP requests on some port (by default, 80) and replying with HTTP responses. This is typically HTML content.
+
 ## HTTP Protocol
 * Is a request-response protocol
 * By default, the HTTP protocol is served on port 80 of the web server
+
+### Versions
+
 
 ## HTTP Messages
 * HTTP messages are how data is exchanged between a server and a client
