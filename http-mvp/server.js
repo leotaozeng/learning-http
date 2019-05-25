@@ -3,10 +3,7 @@ const fs = require('fs');
 const path = require('path')
 
 http.createServer((request, response) => {
-  const html = fs.readFileSync(path.join(__dirname, 'test.html'), 'utf8', (err, data) => {
-    console.log("err->", err);
-    console.log("data", data);
-  });
+  const html = fs.readFileSync(path.join(__dirname, 'test.html'), 'utf8');
 
   if (request.url === '/') {
     response.writeHead(200, {

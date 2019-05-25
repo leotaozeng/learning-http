@@ -20,7 +20,7 @@
   <script>
     fetch('http://127.0.0.1:8887/', {
       method: 'GET'
-    })
+    }).then((data) => data.text()).then(console.log)
 
     // const runAPI = () => {
     //   const exchange = document.querySelector('#exchange')
@@ -29,6 +29,8 @@
 
     // const request = () => {}
   </script>
+
+  <!-- <script src="http://127.0.0.1:8887/"></script> -->
 
   <!-- <script src="/script.js"></script> -->
 </body>

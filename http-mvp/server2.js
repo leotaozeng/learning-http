@@ -1,8 +1,10 @@
 const http = require('http');
 
 http.createServer((request, response) => {
+  console.log(`request comes from ${request.url}`)
+
   response.writeHead(200, {
-    'Content-Type': 'text/html'
+    'Access-Control-Allow-Origin': 'http://127.0.0.1:8888'
   });
   response.end('Hello World');
 }).listen(8887);
