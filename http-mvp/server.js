@@ -9,18 +9,23 @@ http.createServer((request, response) => {
   });
 
   if (request.url === '/') {
-    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.writeHead(200, {
+      'Content-Type': 'text/html',
+      // * is a universal thing
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
     response.end(html);
   }
 
-  if (request.url === '/script.js') {
-    response.writeHead(200, {
-      'Content-Type': 'text/javascript',
-      'Cache-Control': 'max-age=20'
-    });
-    response.end('console.log("script loaded")');
-  }
+  // if (request.url === '/script.js') {
+  //   response.writeHead(200, {
+  //     'Content-Type': 'text/javascript',
+  //     'Cache-Control': 'max-age=20'
+  //   });
+  //   response.end('Served successfully.');
+  // }
 
-}).listen(8090);
+}).listen(8888);
 
-console.log('Server running at http://127.0.0.1:8090/');
+console.log('Server is running at http://127.0.0.1:8888/');
