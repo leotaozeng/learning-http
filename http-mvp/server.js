@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path')
 
 http.createServer((request, response) => {
-  const html = fs.readFileSync(path.join(__dirname, 'test.html'), 'utf8');
-
   if (request.url === '/') {
+    const html = fs.readFileSync(path.join(__dirname, 'test.html'), 'utf8');
+
     response.writeHead(200, {
       'Content-Type': 'text/html',
       // * is a universal thing
@@ -15,13 +15,13 @@ http.createServer((request, response) => {
     response.end(html);
   }
 
-  // if (request.url === '/script.js') {
-  //   response.writeHead(200, {
-  //     'Content-Type': 'text/javascript',
-  //     'Cache-Control': 'max-age=20'
-  //   });
-  //   response.end('Served successfully.');
-  // }
+  if (request.url === '/script.js') {
+    response.writeHead(200, {
+      'Content-Type': 'text/javascript',
+      'Cache-Control': 'public, max-age=31536000'
+    });
+    response.end('console.log("Script Loaded Third")');
+  }
 
 }).listen(8888);
 
