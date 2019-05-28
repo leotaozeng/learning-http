@@ -18,7 +18,9 @@ http.createServer((request, response) => {
   if (request.url === '/script.js') {
     response.writeHead(200, {
       'Content-Type': 'text/javascript',
-      'Cache-Control': 'public, max-age=31536000'
+      'Cache-Control': 'no-cache, max-age=31536000',
+      'Last-Modified': '123',
+      'Etag': '777'
     });
     response.end('console.log("Script Loaded Third")');
   }
