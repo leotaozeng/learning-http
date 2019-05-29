@@ -14,6 +14,7 @@
 * A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
 ## HTTP Protocol
+* It's the backbone of the Internet
 * Is a request-response protocol
 * By default, the HTTP protocol is served on port 80 of the web server
 
