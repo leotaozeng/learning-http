@@ -22,21 +22,22 @@
 
 ## HTTP Messages
 * HTTP messages are how data is exchanged between a server and a client
+* Contain plain text-based information(纯文本信息), sometimes the body contains binary data
 
 ### Request Structure
 | Line            | Example                       | Format                       |
-|-----------------|-------------------------------|---------------------------------------|
-| Start line      | `GET / HTTP/1.1`              | `<method> <request target> <version>` |
-| Headers         | `Host: www.baidu.com`         | `<key>: <value>`                      | 
-| Body (Optional) | `Hello from client!`          | N/A                                   |
+|-----------------|-------------------------------|------------------------------------|
+| Start line      | `GET / HTTP/1.1`              | `<method> <request uri> <version>` |
+| Headers         | `Host: www.baidu.com`         | `<key>: <value>`                   | 
+| Body (Optional) | `Hello from client!`          | N/A                                |
 
 ### Response Structure
-| Line            | Example                       | Format                       |
-|-----------------|-------------------------------|------------------------------|
-| Status line     | `HTTP/1.1 200 OK`             | `<method> <path> <protocol>` |
-| Headers         | `Host: www.example.com`       | `<key>: <value>`             |
-| Empty Line      |  ``                           | N/A                          |
-| Body (Optional) | `Hello from client!`          | N/A                          |
+| Line            | Example                       | Format                    |
+|-----------------|-------------------------------|---------------------------|
+| Status line     | `HTTP/1.1 200 OK`             | `<version> <status code>` |
+| Headers         | `Content-Type: text/html`     | `<key>: <value>`          |
+| Empty Line      |  ``                           | N/A                       |
+| Body (Optional) | `Hello from client!`          | N/A                       |
 
 ## Documentations
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages">HTTP Messages</a>
