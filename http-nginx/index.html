@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>This is content and data is: <span id="data"></span></div>
+  <button id="btn">Click Me</button>
+
+  <script>
+    let index = 0
+
+    function executeRequest() {
+      const dataEl = document.querySelector('#data')
+      dataEl.innerText = ''
+
+      fetch('/data', {
+        headers: {
+          'X-Test-Cache': index++
+        }
+      }).then((res) => res.text()).then((text) => dataEl.innerText = text)
+    }
+
+    document.querySelector('#btn').addEventListener('click', executeRequest, false)
+  </script>
+</body>
+
+</html>
