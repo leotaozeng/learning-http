@@ -16,6 +16,10 @@
 * By default, the HTTP protocol is served on port 80 of the web server
 
 ### Versions
+* There are multiple versions of the HTTP protocol
+* HTTP 0.9
+* HTTP 1.0 & 1.1(Keep-alive/持久连接)
+* hTTP 2.0(a binary format/所有数据以二进制传输)
 
 ## HTTP Messages
 * HTTP messages are how data is exchanged between a server and a client
@@ -38,7 +42,5 @@
 
 ## Documentations
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages">HTTP Messages</a>
-
-<a href="https://www.codecademy.com/articles/what-is-cors">What is CORS?</a>
 
 <a href="https://jakearchibald.com/2016/caching-best-practices/?utm_campaign=chrome_series_catchingbestpractices_072717&utm_source=chromedev&utm_medium=yt-desc">Caching best practices & max-age gotchas</a>
