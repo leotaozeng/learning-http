@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 http.createServer(function (req, res) {
-  const html = fs.readFileSync('index2.html', 'utf8');
+  const html = fs.readFileSync('index1.html', 'utf8');
 
   res.writeHead(200, {
     'Content-Type': 'text/html'
