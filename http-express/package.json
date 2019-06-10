@@ -1,0 +1,15 @@
+{
+  "name": "http-express",
+  "version": "1.0.0",
+  "description": "<a href=\"https://flaviocopes.com/express-https-self-signed-certificate/\">An Express HTTPS server with a self-signed certificate</a>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
